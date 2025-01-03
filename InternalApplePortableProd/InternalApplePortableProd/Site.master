@@ -1,0 +1,163 @@
+﻿<%@ Master Language="VB" CodeFile="Site.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - ASSET MANAGER</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<%--    <script src="js/jquery-1.10.2.min.js"></script>--%>
+    
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        body, html {padding:0;margin:0; font-family:Arial;color:#353535}
+        
+        div.menu
+        {
+            color: #666;
+            background-color:#fff;
+            width:100%;
+            font-size: 17px;
+            border-bottom: 1px solid #666;
+        }
+
+        div.menu ul
+        {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            width: auto;
+        }
+
+        div.menu ul li a, div.menu ul li a:visited
+        {
+            outline:0;
+            padding: 14px 16px;
+            color: #353535;
+            display: block;
+            line-height: 1.35em;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        div.menu ul li a:hover
+        {
+            background-color: #f2f2f2;
+            text-decoration: none;
+        }
+
+        div.menu ul li a:active
+        {
+            background-color: #f2f2f2;
+            text-decoration: none;
+        }
+
+        .active {
+            background-color: #f2f2f2;
+            text-decoration: none;
+        }
+        #logo {
+            float:left;
+            margin:20px;
+            margin-bottom:30px;
+            width:50px;
+        }
+        #tagline {
+            height:100px;
+            width:500px;
+            float:right;
+            text-align:right;
+            font-size:60px;
+            padding-right:10px;
+            overflow:hidden;
+        }
+        .login{
+            font-size:12px;
+            color:#6C6C6C;
+            height:15px;
+            float:right;
+            width:250px;
+
+        }
+            .login a {
+                color:#6C6C6C;
+            }
+            footer {
+                position:fixed;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height:20px;
+                width:100%;
+                text-align:center;
+                display:none;
+            }
+            .RadGrid_Default a {
+                color: #333333 !important;
+            }
+    </style>
+    <script>
+        $(document).ready(function () {
+            var url = window.location;
+            
+            $('.menu').find('.active').removeClass('active');
+            $('.menu ul li a').each(function () {
+                
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+      <form runat="server">
+        <div style="width:100%;height:100px;">
+            <img src="../img/logo.png" alt="" id="logo"/>
+            <div id="tagline">
+                <span style="height:60px;font-size:30px;">ASSET MANAGER</span><br />
+                <span class="login" >
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate><a runat="server" href="~/Account/Login.aspx">Log in</a></AnonymousTemplate>
+                        <LoggedInTemplate><a runat="server" href="~/Account/Manage.aspx" title="Manage your account">Hello, <%: Page.User.Identity.Name%>!</a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                    
+                </span>
+            </div>
+        </div>
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="true" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/place.aspx" Text="New Order"/>
+                        <asp:MenuItem NavigateUrl="~/inventory.aspx" Text="Inventory" />
+                        <asp:MenuItem NavigateUrl="~/exhibits.aspx" Text="Exhibits"  />
+                        <asp:MenuItem NavigateUrl="~/reports.aspx" Text="History"/>
+                        <asp:MenuItem NavigateUrl="~/schedule.aspx" Text="Schedule"/>
+                        <asp:MenuItem NavigateUrl="~/help.aspx" Text="Help"/>
+                        <asp:MenuItem NavigateUrl="~/users.aspx" Text="Users"/>
+                        <asp:MenuItem NavigateUrl="~/warehouse.aspx" Text="Warehouse"  />
+                        <asp:MenuItem NavigateUrl="~/shipping.aspx" Text="Shipping"  />
+                        <asp:MenuItem NavigateUrl="~/reporting.aspx" Text="Reporting"  />
+<%--                        <asp:MenuItem NavigateUrl="~/admin.aspx" Text="Admin"  />--%>
+                    </Items>
+        </asp:Menu>
+        
+        
+        
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+            <footer>
+                FromTheCoolestGuyEver &copy; <%: DateTime.Now.Year %> 
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

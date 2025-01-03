@@ -1,0 +1,5 @@
+[Autorun]
+Open=autorun.bat
+Action=Start autorun
+Label=ASCO
+Icon=autorun.bat

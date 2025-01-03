@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<title>Matrex Exhibits : Reach the Right Crowd</title>
+<meta name="description" content="Matrex Exhibits - Chicago Custom Trade Show and Rental Exhibits" />
+<meta name="keywords" content="Chicago Trade Show Exhibits Custom and Rental" />
+<script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript" src="scripts/carousel.js"></script>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<!--conditional comments -->
+<!--[if lte IE 8]>
+<style type="text/css">.mainNavigation li a:hover {padding-bottom: 20px;}
+.bodycopyNavigation li a { background-image: url(images/bg_arrowNav_off.gif); background-position: 10px 10px; }
+.bodycopyNavigation li a:hover { background-image: url(images/bg_arrowNav_over.gif);  background-position: 10px 10px; }</style>
+<![endif]-->
+
+<!--[if lte IE 6]>
+<style type="text/css">h1 { background-image: url(images/bg_arrowHeader.gif); }</style>
+<![endif]-->
+
+</head>
+<body>
+	<div id="header">
+		<a href="index.html"><img src="images/grc_matrexLogo.gif" alt="Matrex Exhibits" border="0" class="headerLogo" /></a>
+		<img src="images/grc_tagline.gif" alt="Reach the Right Crowd" class="headerTagline" />
+		<div class="clear"></div>
+	</div>
+	<div id="contentBG">
+		<!-- .contentWrap-fixedHeight has fixed height of 500px and overflow is set to hidden !-->
+		<div class="contentWrap-fixedHeight">
+		<IMG src="images/webcam1.jpg"  name="refresh" width="460px"> 
+      	<IMG src="images/webcam2.jpg"  name="refresh2" width="460px"> 
+      	<SCRIPT language="JavaScript" type="text/javascript"> 
+      	<!-- 
+      	var t = 3 // interval in seconds 
+      	image = "images/webcam1.jpg" //name of the image 
+      	image2 = "images/webcam2.jpg"
+	  	function Start() { 
+      	tmp = new Date(); 
+      	tmp = "?"+tmp.getTime() 
+      	document.images["refresh2"].src = image2+tmp
+	  	document.images["refresh"].src = image+tmp
+	  
+      	setTimeout("Start()", t*2200) 
+      	} 
+      	Start(); 
+      // --> 
+      </SCRIPT> 
+			
+			
+		</div>
+	</div>
+	<div id="mainNavigationWrap">
+		<ul class="mainNavigation">
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="how_were_different.html">How We're Different</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="http://blog.matrexexhibits.net/">Blog</a></li>
+			<li><a href="contact_us.html">Contact Us</a></li>
+		</ul>
+	</div>
+	<div id="footer">
+		<ul class="footerNavigation">
+			<li>&copy;2011 Matrex Exhibits</li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="privacy_policy.html">Privacy Policy</a></li>
+			<li><a href="sitemap.html">Sitemap</a></li>
+			<li><a href="contact_us.html">Contact Us</a></li>
+			<li><a href="terms_of_use.html">Terms of Use</a></li>
+		</ul>
+		
+        <form id="searchForm" action="search_results.asp" method="get">
+			<input class="field" type="text" name="txtSearch"/>
+			<input id="searchBtn" name="search" type="submit" value="Search" class="button"/>
+		</form>
+		<a href="http://www.matrexexhibits.net/" class="accessBtn">Client Access</a>
+		<ul class="mediaNavigation">
+			<li><a href="http://www.facebook.com/pages/Matrex/373205335763" target="_blank"><img src="images/grc_facebookIcon.gif" alt="Join Matrex on Facebook" border="0" /></a></li>
+			<li><a href="http://twitter.com/#!/matrex_exhibits" target="_blank"><img src="images/grc_twitterIcon.gif" alt="Follow Matrex on Twitter" border="0" /></a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+<!-- Insert Google Analytics here !-->
+<!-- FOOTPRINT HTML START -->
+<script type="text/javascript" src="http://script.footprintlive.com/?site=www.matrexhibits.com"></script><noscript><a href="http://www.footprintlive.com" target="_blank"><img src="http://img.footprintlive.com/?cmd=nojs&amp;site=www.matrexhibits.com" alt="free tracking" border="0" /></a></noscript>
+<!-- FOOTPRINT HTML END -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24366860-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
